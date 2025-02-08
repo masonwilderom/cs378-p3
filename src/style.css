@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .logo {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+  }
+  
+  .btn-whataburger {
+    background-color: #ee4b23;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .btn-whataburger:hover {
+    background-color: #d93c1f;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 576px) {
+    .row.align-items-center {
+      flex-wrap: wrap;
+    }
+    .col-auto {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
