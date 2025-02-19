@@ -88,7 +88,6 @@ const MenuItem = ({ item, count, onIncrement, onDecrement }) => (
 );
 
 const App = () => {
-  // Initialize cart state with a count of 0 for each menu item.
   const initialCart = menuItems.reduce((acc, item) => {
     acc[item.id] = 0;
     return acc;
@@ -111,7 +110,6 @@ const App = () => {
   };
 
   const handleClear = () => {
-    // Reset all counts to zero.
     const clearedCart = Object.keys(cart).reduce((acc, key) => {
       acc[key] = 0;
       return acc;
@@ -119,7 +117,6 @@ const App = () => {
     setCart(clearedCart);
   };
 
-  // Calculate subtotal based on the counts and prices.
   const subtotal = menuItems.reduce((total, item) => {
     const price = parseFloat(item.price.replace('$', ''));
     const count = cart[item.id] || 0;
@@ -127,7 +124,6 @@ const App = () => {
   }, 0);
 
   const handleOrder = () => {
-    // Filter items that have been added to the cart.
     const orderedItems = menuItems.filter(item => cart[item.id] > 0);
     if (orderedItems.length === 0) {
       alert("No items in cart");
